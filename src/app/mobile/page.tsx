@@ -359,17 +359,36 @@ export default function MobileCard() {
 
         {/* right */}
         <div className="w-3/4 flex flex-col gap-4 mb-4">
-          <div className="mt-10 flex items-center justify-end gap-4">
+          <div className="mt-10 flex items-center justify-end gap-3">
             <h1 className="text-base font-semibold">VIEW</h1>
             <CgMenu className="text-4xl cursor-pointer rounded-full bg-cyan-100 p-2 hover:bg-cyan-300" />
             <LuLayoutGrid className="text-4xl cursor-pointer  p-2 " />
             <Separator orientation="vertical" />
             <h2 className="text-base font-semibold">SORT BY: </h2>
+            <div className="w-1/7">
+              <Select>
+                <SelectTrigger className="w-[120px] border-none focus:border-none">
+                  <SelectValue placeholder="Newly Listed" />
+                </SelectTrigger>
+                <SelectContent className="border-none">
+                  <SelectItem value="newlylisted" className="border-none">
+                    Newly Listed
+                  </SelectItem>
+                  <SelectItem value="relevant" className="border-none">
+                    Relevant
+                  </SelectItem>
+                  <SelectItem value="recent" className="border-none">
+                    Recent
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
           </div>
+          <Separator orientation="horizontal" />
           {demoMobiles.map((mobile) => (
             <div
               key={mobile.id}
-              className="border rounded-md overflow-hidden flex hover:shadow-md transition cursor-pointer max-w-5xl"
+              className="border rounded-md overflow-hidden flex hover:shadow-md transition cursor-pointer"
               onClick={() => handleClick(mobile.id)}
             >
               {/* Image + Featured Badge */}

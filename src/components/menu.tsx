@@ -17,15 +17,15 @@ import { usePathname, useRouter } from "next/navigation";
 
 const Menu = () => {
   const router = useRouter();
-  const [hideBannerImage, setHideBannerImage] = useState(true);
+  const [hideBannerImage, setHideBannerImage] = useState(false);
   const pathname = usePathname();
   useEffect(() => {
     if (pathname !== "/") {
-      setHideBannerImage(false);
-    } else {
       setHideBannerImage(true);
+    } else {
+      setHideBannerImage(false);
     }
-  }, [pathname]);
+  }, []);
 
   return (
     <div className="mt-6">
@@ -55,7 +55,7 @@ const Menu = () => {
           Land & Plots
         </Link>
       </div>
-      {hideBannerImage && (
+      {!hideBannerImage && (
         <>
           <div className="mt-6">
             <Image

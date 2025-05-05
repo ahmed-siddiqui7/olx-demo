@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { CiHeart } from "react-icons/ci";
+import { MdArrowForwardIos } from "react-icons/md";
 import { PiGreaterThanThin } from "react-icons/pi";
 
 const JobView = () => {
@@ -14,7 +15,7 @@ const JobView = () => {
         >
           View More{" "}
           <span className="ml-2">
-            <PiGreaterThanThin className="font-bold" />
+            <MdArrowForwardIos className="font-bold" />
           </span>
         </Link>
       </div>

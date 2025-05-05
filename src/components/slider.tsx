@@ -11,6 +11,7 @@ import Link from "next/link";
 import { PiGreaterThanThin } from "react-icons/pi";
 import { Separator } from "./ui/separator";
 import { Progress } from "./ui/progress";
+import { MdArrowForwardIos } from "react-icons/md";
 
 const Slider = () => {
   return (
@@ -23,7 +24,7 @@ const Slider = () => {
         >
           View More{" "}
           <span className="ml-2">
-            <PiGreaterThanThin className="font-bold" />
+            <MdArrowForwardIos className="font-bold" />
           </span>
         </Link>
       </div>
