@@ -3,7 +3,6 @@
 import Menu from "@/components/menu";
 import { Button } from "@/components/ui/button";
 import { useRouter, useSearchParams } from "next/navigation";
-import React from "react";
 import { IoChatbubbleOutline } from "react-icons/io5";
 import { LuPhone } from "react-icons/lu";
 import { MdLocationOn } from "react-icons/md";

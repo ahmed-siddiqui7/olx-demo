@@ -1,5 +1,3 @@
-import React from "react";
-
 const MiniPrice = () => {
   return (
     <div className="rounded mt-4 border py-4 px-4">

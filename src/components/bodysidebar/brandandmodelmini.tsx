@@ -1,4 +1,3 @@
-import React from "react";
 import { Input } from "../ui/input";
 import { IoSearch } from "react-icons/io5";
 

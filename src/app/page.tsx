@@ -7,7 +7,6 @@ import MobileView from "@/components/categories/mobile/page";
 import TabletView from "@/components/categories/tablets/page";
 import Menu from "@/components/menu";
 import Slider from "@/components/slider";
-import React from "react";
 
 const Home = () => {
   return (
