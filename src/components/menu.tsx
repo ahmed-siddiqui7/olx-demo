@@ -12,7 +12,21 @@ import Image from "next/image";
 import Link from "next/link";
 import CategoryGrid from "./category";
 
+import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+
 const Menu = () => {
+  const router = useRouter();
+  const [hideBannerImage, setHideBannerImage] = useState(true);
+  const pathname = usePathname();
+  useEffect(() => {
+    if (pathname !== "/") {
+      setHideBannerImage(false);
+    } else {
+      setHideBannerImage(true);
+    }
+  }, [pathname]);
+
   return (
     <div className="mt-6">
       <div className="w-1/2 flex justify-between items-center">
@@ -41,16 +55,20 @@ const Menu = () => {
           Land & Plots
         </Link>
       </div>
-      <div className="mt-6">
-        <Image
-          src="https://images.olx.com.pk/thumbnails/535914437-800x600.webp"
-          alt=""
-          className=""
-          width={2000}
-          height={200}
-        />
-      </div>
-      <CategoryGrid />
+      {hideBannerImage && (
+        <>
+          <div className="mt-6">
+            <Image
+              src="https://images.olx.com.pk/thumbnails/535914437-800x600.webp"
+              alt=""
+              className=""
+              width={2000}
+              height={200}
+            />
+          </div>
+          <CategoryGrid />
+        </>
+      )}
     </div>
   );
 };
