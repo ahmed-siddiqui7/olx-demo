@@ -12,6 +12,7 @@ import { IoCarSportOutline, IoLocationOutline } from "react-icons/io5";
 import { FaRegBuilding } from "react-icons/fa";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -19,13 +20,15 @@ const Header = () => {
       {/* Left: Logo and Categories */}
       <div className="flex items-center space-x-8  cursor-pointer">
         {/* Logo */}
-        <svg
-          height="32"
-          viewBox="0 0 36.289 20.768"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M18.9 20.77V0h4.93v20.77zM0 10.39a8.56 8.56 0 1 1 8.56 8.56A8.56 8.56 0 0 1 0 10.4zm5.97-.01a2.6 2.6 0 1 0 2.6-2.6 2.6 2.6 0 0 0-2.6 2.6zm27 5.2l-1.88-1.87-1.87 1.88H25.9V12.3l1.9-1.9-1.9-1.89V5.18h3.27l1.92 1.92 1.93-1.92h3.27v3.33l-1.9 1.9 1.9 1.9v3.27z" />
-        </svg>
+        <Link href="/">
+          <svg
+            height="32"
+            viewBox="0 0 36.289 20.768"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M18.9 20.77V0h4.93v20.77zM0 10.39a8.56 8.56 0 1 1 8.56 8.56A8.56 8.56 0 0 1 0 10.4zm5.97-.01a2.6 2.6 0 1 0 2.6-2.6 2.6 2.6 0 0 0-2.6 2.6zm27 5.2l-1.88-1.87-1.87 1.88H25.9V12.3l1.9-1.9-1.9-1.89V5.18h3.27l1.92 1.92 1.93-1.92h3.27v3.33l-1.9 1.9 1.9 1.9v3.27z" />
+          </svg>
+        </Link>
         {/* Motors & Property */}
         <div className="flex space-x-8">
           <div className="flex items-center space-x-1  cursor-pointer">

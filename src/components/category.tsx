@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const categories = [
-  { name: "Mobiles", img: "/mobile.png", bg: "bg-red-100", href: "/" },
+  { name: "Mobiles", img: "/mobile.png", bg: "bg-red-100", href: "/mobile" },
   { name: "Vehicles", img: "/car.png", bg: "bg-yellow-100", href: "/" },
   {
     name: "Property For Sale",
