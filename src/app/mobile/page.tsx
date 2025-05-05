@@ -8,6 +8,7 @@ import Menu from "@/components/menu";
 import Link from "next/link";
 import { FiPhone } from "react-icons/fi";
 import { Checkbox } from "@/components/ui/checkbox";
+import { CgMenu } from "react-icons/cg";
 
 import { BsChatDots } from "react-icons/bs";
 import {
@@ -21,6 +22,8 @@ import { IoLocationOutline, IoSearch } from "react-icons/io5";
 import { LucideIceCreamCone } from "lucide-react";
 import { PiMagnifyingGlass } from "react-icons/pi";
 import { Input } from "@/components/ui/input";
+import { LuLayoutGrid } from "react-icons/lu";
+import { Separator } from "@/components/ui/separator";
 
 const demoMobiles = [
   {
@@ -295,10 +298,74 @@ export default function MobileCard() {
               </p>
             </div>
           </div>
+          <div className="rounded mt-4 border py-4 px-4">
+            <h2 className="text-lg font-semibold">Condition</h2>
+            <div className="flex flex-col mt-4 gap-2">
+              <div className="flex items-center">
+                <Checkbox
+                  id="used"
+                  className="hover:text-black border-2 border-black hover:cursor-pointer hover:border-2 hover:border-black"
+                />
+                <label
+                  htmlFor="used"
+                  className=" hover:text-black  hover:font-semibold hover:cursor-pointer pl-2 text-sm
+                    leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Used (19001)
+                </label>
+              </div>
+              <div className="flex items-center">
+                <Checkbox
+                  id="new"
+                  className="hover:text-black border-2 border-black hover:cursor-pointer hover:border-2 hover:border-black"
+                />
+                <label
+                  htmlFor="new"
+                  className=" hover:text-black  hover:font-semibold hover:cursor-pointer pl-2 text-sm
+                    leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  New (19001)
+                </label>
+              </div>
+              <div className="flex items-center">
+                <Checkbox
+                  id="openbox"
+                  className="hover:text-black border-2 border-black hover:cursor-pointer hover:border-2 hover:border-black"
+                />
+                <label
+                  htmlFor="openbox"
+                  className=" hover:text-black  hover:font-semibold hover:cursor-pointer pl-2 text-sm
+                    leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Open box (19001)
+                </label>
+              </div>
+              <div className="flex items-center">
+                <Checkbox
+                  id="refurbished"
+                  className="hover:text-black border-2 border-black hover:cursor-pointer hover:border-2 hover:border-black"
+                />
+                <label
+                  htmlFor="refurbished"
+                  className=" hover:text-black  hover:font-semibold hover:cursor-pointer pl-2 text-sm
+                    leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Refurbished (19001)
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* right */}
         <div className="w-3/4 flex flex-col gap-4 mb-4">
+          <div className="mt-10 flex items-center justify-end gap-4">
+            <h1 className="text-base font-semibold">VIEW</h1>
+            <CgMenu className="text-4xl cursor-pointer rounded-full bg-cyan-100 p-2 hover:bg-cyan-300" />
+            <LuLayoutGrid className="text-4xl cursor-pointer  p-2 " />
+            <Separator orientation="vertical" />
+            <h2 className="text-base font-semibold">SORT BY: </h2>
+          </div>
           {demoMobiles.map((mobile) => (
             <div
               key={mobile.id}
