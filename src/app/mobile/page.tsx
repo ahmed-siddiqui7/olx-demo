@@ -83,7 +83,7 @@ export default function MobileCard() {
             <CgMenu className="text-4xl cursor-pointer rounded-full bg-cyan-100 p-2 hover:bg-cyan-300" />
             <LuLayoutGrid className="text-4xl cursor-pointer  p-2 " />
             <Separator orientation="vertical" />
-            <h2 className="text-base font-semibold">SORT BY: </h2>
+            <h2 className="text-base font-semibold">SORT BY:</h2>
             <div className="w-1/7">
               <Select>
                 <SelectTrigger className="w-[120px] border-none focus:border-none">
