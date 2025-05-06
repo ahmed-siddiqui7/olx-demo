@@ -137,7 +137,7 @@ export default function MobileCard() {
                   </div>
                   <CiHeart className="text-2xl text-gray-700 hover:text-red-500" />
                 </div>
-
+                  
                 {/* Location and Actions */}
                 <div className="flex justify-between mt-4 flex-col">
                   <p className="text-xs text-gray-500">{mobile.location}</p>
